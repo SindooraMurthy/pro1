@@ -1,0 +1,25 @@
+<html>
+<body>
+<table>
+    <h2>Multiplication Tables</h2>
+    <tr>
+        <td>Enter a Number :</td>
+        <td><input type="number" onchange="mulTable(this)"></td>
+     </tr>
+     <tr><td><span id="number"></span></td></tr>
+</table>
+<script> 
+function mulTable(num) {
+    var input = num.value;
+    var table="";
+    var product;
+        for(i=1;i<=10;i++) 
+        {
+            product = input * i;
+            table +=  input + " * " + i + " = " + product + "<br/>";
+        }
+        document.getElementById("number").innerHTML = table;    
+}
+</script>
+</body>
+</html>       
